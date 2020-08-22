@@ -1,16 +1,26 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'jquery'; import 'popper.js'; import 'bootstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Home from './vista/Home'
+import Anime from './vista/Anime'
+import Manga from './vista/Manga'
 
 
 function App() {
   return (
     <>
-      <h1>Hola mundo</h1>
-      <div className="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
-      </div>
-
+      <Router>
+        <Switch>
+          <Route path='/' component={Home} exact />
+          <Route path='/Manga' component={Manga} exact />
+          <Route path='/Anime' component={Anime} exact />
+          <Route render={() => <h1>Not found!</h1>} />
+        </Switch>
+      </Router>
     </>
   );
 }
