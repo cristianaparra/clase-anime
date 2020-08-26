@@ -8,7 +8,7 @@ const Home = () => {
         console.log(event.target.elements.filter.value);
 
     } 
-
+console.log(NuevaFuncion)
     return (
         <>
         <form onSubmit={NuevaFuncion}>
