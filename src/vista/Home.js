@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+
 
 const Home = () => {
     
@@ -8,7 +9,20 @@ const Home = () => {
         console.log(event.target.elements.filter.value);
 
     } 
+<<<<<<< HEAD
 console.log(NuevaFuncion)
+=======
+    useEffect (() => {
+        fetch('https://kitsu.io/api/edge/anime')
+        .then ((resp) => resp.json())
+        .then ((datos) => {
+            console.log(datos.data)
+        })
+
+    }, [])
+
+
+>>>>>>> f47bb88da230f125329f0ebd827b1607b064f321
     return (
         <>
         <form onSubmit={NuevaFuncion}>
