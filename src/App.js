@@ -9,6 +9,11 @@ import Home from './vista/Home'
 import Anime from './vista/Anime'
 import Manga from './vista/Manga'
 
+import "bootstrap/dist/css/bootstrap.css";
+import "jquery";
+import "popper.js";
+import "bootstrap";
+
 
 function App() {
   return (
